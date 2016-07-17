@@ -1,0 +1,1637 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>chapter-2</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第二章：推荐系统入门</h1>
+<p>原文：<a href="http://guidetodatamining.com/chapter-2/">http://guidetodatamining.com/chapter-2/</a></p>
+<p>内容：<br />
+<em> 推荐系统工作原理<br />
+</em> 社会化协同过滤工作原理<br />
+<em> 如何找到相似物品<br />
+</em> 曼哈顿距离<br />
+<em> 欧几里得距离<br />
+</em> 闵可夫斯基距离<br />
+<em> 皮尔逊相关系数<br />
+</em> 余弦相似度<br />
+<em> 使用Python实现K最邻近算法<br />
+</em> 图书漂流站（BookCrossing）数据集</p>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>你喜欢的东西我也喜欢</h2>
+<p>我们将从推荐系统开始，开启数据挖掘之旅。推荐系统无处不在，如亚马逊网站的“看过这件商品的顾客还购买过”板块：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-1.png" /></p>
+<p>last.fm上对音乐和演唱会的推荐（相似歌手）：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-2.png" /></p>
+<p>在亚马逊的例子里，它用了两个元素来进行推荐：一是我浏览了里维斯翻译的《法华经》一书；二是其他浏览过该书的顾客还浏览过的译作。</p>
+<p>本章我们讲述的推荐方法称为协同过滤。顾名思义，这个方法是利用他人的喜好来进行推荐，也就是说，是大家一起产生的推荐。他的工作原理是这样的：如果要推荐一本书给你，我会在网站上查找一个和你类似的用户，然后将他喜欢的书籍推荐给你——比如巴奇加卢比的《发条女孩》。</p>
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>如何找到相似的用户？</h3>
+<p>所以首先要做的工作是找到相似的用户。这里用最简单的二维模型来描述。假设用户会在网站用五颗星来评价一本书——没有星表示书写得很糟，五颗星表示很好。因为我们用的是二维模型，所以仅对两本书进行评价：史蒂芬森的《雪崩》（纵轴）和拉尔森的《龙纹身的女孩》（横轴）。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-3.png" /></p>
+<p>首先，下表显示有三位用户对这两本书做了评价：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-4.png" /></p>
+<p>现在我想为神秘的X先生推荐一本书，他给《雪崩》打了四星，《龙纹身的女孩》两星。第一个任务是找出哪个用户和他最为相似。我们用距离来表示。</p>
+<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>曼哈顿距离</h3>
+<p>最简单的距离计算方式是曼哈顿距离。在二维模型中，每个人都可以用(x, y)的点来表示，这里我用下标来表示不同的人，(x<sub>1</sub>, y<sub>1</sub>)表示艾米，(x<sub>2</sub>, y<sub>2</sub>)表示那位神秘的X先生，那么他们之间的曼哈顿距离就是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-5.png" /></p>
+<p>也就是x之差的绝对值加上y之差的绝对值，这样他们的距离就是4。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-6.png" /></p>
+<p>完整的计算结果如下：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-7.png" /></p>
+<p>艾米的距离最近，在她的浏览历史中可以看到她曾给巴奇加卢比的《发条女孩》打过五星，于是我们就可以把这本书推荐给X先生。</p>
+<h3 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>欧几里得距离</h3>
+<p>曼哈顿距离的优点之一是计算速度快，对于Facebook这样需要计算百万用户之间的相似度时就非常有利。</p>
+<p><strong>勾股定理</strong></p>
+<p>也许你还隐约记得勾股定理。另一种计算距离的方式就是看两点之间的直线距离：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-8.png" /></p>
+<p>利用勾股定理，我们可以如下计算距离：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-9.png" /></p>
+<p>这条斜线就是欧几里得距离，公式是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-10.png" /></p>
+<p>回顾一下，这里的x<sub>1</sub>表示用户1喜欢《龙纹身》的程度，x<sub>2</sub>是用户2喜欢这本书的程度；y<sub>1</sub>则是用户1喜欢《雪崩》的程度，y<sub>2</sub>是用户2喜欢这本书的程度。</p>
+<p>艾米给《龙纹身》和《雪崩》都打了五颗星，神秘的X先生分别打了两星和四星，这样他们之间的欧几里得距离就是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-11.png" /></p>
+<p>以下是全部用户的计算结果：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-12.png" /></p>
+<h3 id="n"><a name="user-content-n" href="#n" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>N维模型</h3>
+<p>刚才我们仅仅对两本书进行评价（二维模型），下面让我们扩展一下，尝试更复杂的模型。假设我们现在要为一个在线音乐网站的用户推荐乐队。用户可以用1至5星来评价一个乐队，其中包含半星（如2.5星）。下表展示了8位用户对8支乐队的评价：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-13.png" /></p>
+<p>表中的短横表示这位用户没有给这支乐队打分。我们在计算两个用户的距离时，只采用他们都评价过的乐队，比如要计算Angelica和Bill的距离，我们只会用到5支乐队。这两个用户的曼哈顿距离为：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-14.png" /></p>
+<p>最后距离即是上方数据的加和：(1.5 + 1.5 + 3 + 2 + 1)。</p>
+<p>计算欧几里得距离的方法也是类似的，我们也只取双方都评价过的乐队。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-15.png" /></p>
+<p>用公式来描述即：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-16.png" /></p>
+<p><strong>掌握了吗？</strong> 那就试试计算其他几个用户之间的距离吧。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-17.png" /></p>
+<p><strong>有个瑕疵</strong></p>
+<p>当我们计算Hailey和Veronica的距离时会发现一个问题：他们共同评价的乐队只有两支（Norah Jones和The Strokes），而Hailey和Jordyn共同评价了五支乐队，这似乎会影响我们的计算结果，因为Hailey和Veronica之间是二维的，而Haily和Veronica之间是五维的。曼哈顿距离和欧几里得距离在数据完整的情况下效果最好。如何处理缺失数据，这在研究领域仍是一个活跃的话题。本书的后续内容会进行一些讨论，这里先不展开。现在，让我们开始构建一个推荐系统吧。</p>
+<h3 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>推广：闵可夫斯基距离</h3>
+<p>我们可以将曼哈顿距离和欧几里得距离归纳成一个公式，这个公式称为闵可夫斯基距离：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-18.png" /></p>
+<p>其中：</p>
+<ul>
+<li><code>r = 1</code> 该公式即曼哈顿距离</li>
+<li><code>r = 2</code> 该公式即欧几里得距离</li>
+<li><code>r = ∞</code> 极大距离</li>
+</ul>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-19.png" /></p>
+<p>当你在书中看到这些数学公式，你可以选择快速略过它，继续读下面的文字，过去我就是这样；你也可以停下来，好好分析一下这些公式，会发现其实它们并不难理解。比如上面的公式，当r = 1时，可以简化成如下形式：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-20.png" /></p>
+<p>仍用上文的音乐站点为例，x和y分别表示两个用户，d(x, y)表示他们之间的距离，n表示他们共同评价过的乐队数量，我们之前已经做过计算：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-21.png" /></p>
+<p>其中Difference一栏表示两者评分之差的绝对值，加起来等于9，也就是他们之间的距离。</p>
+<p>当r = 2时，我们得到欧几里得距离的计算公式：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-22.png" /></p>
+<p><strong>提前预告一下：r值越大，单个维度的差值大小会对整体距离有更大的影响。</strong></p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-23.png" /></p>
+<h2 id="python"><a name="user-content-python" href="#python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>使用Python代码来表示数据（终于要开始编程了）</h2>
+<p>在Python中，我们可以用多种方式来描述上表中的数据，这里我选择Python的字典类型（或者称为关联数组、哈希表）。</p>
+<p>注：本书的所有代码可以在<a href="///F://guidetodatamining/guidetodatamining/code">这里</a>找到。</p>
+<pre><code class="python">users = {&quot;Angelica&quot;: {&quot;Blues Traveler&quot;: 3.5, &quot;Broken Bells&quot;: 2.0, &quot;Norah Jones&quot;: 4.5, &quot;Phoenix&quot;: 5.0, &quot;Slightly Stoopid&quot;: 1.5, &quot;The Strokes&quot;: 2.5, &quot;Vampire Weekend&quot;: 2.0},
+         &quot;Bill&quot;:{&quot;Blues Traveler&quot;: 2.0, &quot;Broken Bells&quot;: 3.5, &quot;Deadmau5&quot;: 4.0, &quot;Phoenix&quot;: 2.0, &quot;Slightly Stoopid&quot;: 3.5, &quot;Vampire Weekend&quot;: 3.0},
+         &quot;Chan&quot;: {&quot;Blues Traveler&quot;: 5.0, &quot;Broken Bells&quot;: 1.0, &quot;Deadmau5&quot;: 1.0, &quot;Norah Jones&quot;: 3.0, &quot;Phoenix&quot;: 5, &quot;Slightly Stoopid&quot;: 1.0},
+         &quot;Dan&quot;: {&quot;Blues Traveler&quot;: 3.0, &quot;Broken Bells&quot;: 4.0, &quot;Deadmau5&quot;: 4.5, &quot;Phoenix&quot;: 3.0, &quot;Slightly Stoopid&quot;: 4.5, &quot;The Strokes&quot;: 4.0, &quot;Vampire Weekend&quot;: 2.0},
+         &quot;Hailey&quot;: {&quot;Broken Bells&quot;: 4.0, &quot;Deadmau5&quot;: 1.0, &quot;Norah Jones&quot;: 4.0, &quot;The Strokes&quot;: 4.0, &quot;Vampire Weekend&quot;: 1.0},
+         &quot;Jordyn&quot;:  {&quot;Broken Bells&quot;: 4.5, &quot;Deadmau5&quot;: 4.0, &quot;Norah Jones&quot;: 5.0, &quot;Phoenix&quot;: 5.0, &quot;Slightly Stoopid&quot;: 4.5, &quot;The Strokes&quot;: 4.0, &quot;Vampire Weekend&quot;: 4.0},
+         &quot;Sam&quot;: {&quot;Blues Traveler&quot;: 5.0, &quot;Broken Bells&quot;: 2.0, &quot;Norah Jones&quot;: 3.0, &quot;Phoenix&quot;: 5.0, &quot;Slightly Stoopid&quot;: 4.0, &quot;The Strokes&quot;: 5.0},
+         &quot;Veronica&quot;: {&quot;Blues Traveler&quot;: 3.0, &quot;Norah Jones&quot;: 5.0, &quot;Phoenix&quot;: 4.0, &quot;Slightly Stoopid&quot;: 2.5, &quot;The Strokes&quot;: 3.0}
+        }
+</code></pre>
+
+<p>我们可以用以下方式来获取某个用户的评分：</p>
+<pre><code class="python">&gt;&gt;&gt; user[&quot;Veronica&quot;]
+{&quot;Blues Traveler&quot;: 3.0, &quot;Norah Jones&quot;: 5.0, &quot;Phoenix&quot;: 4.0, &quot;Slightly Stoopid&quot;: 2.5, &quot;The Strokes&quot;: 3.0}
+&gt;&gt;&gt;
+</code></pre>
+
+<h3 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>计算曼哈顿距离</h3>
+<pre><code class="python">def manhattan(rating1, rating2):
+    &quot;&quot;&quot;计算曼哈顿距离。rating1和rating2参数中存储的数据格式均为
+    {'The Strokes': 3.0, 'Slightly Stoopid': 2.5}&quot;&quot;&quot;
+    distance = 0
+    for key in rating1:
+        if key in rating2:
+            distance += abs(rating1[key] - rating2[key])
+    return distance
+</code></pre>
+
+<p>我们可以做一下测试：</p>
+<pre><code class="python">&gt;&gt;&gt; manhattan(users['Hailey'], users['Veronica'])
+2.0
+&gt;&gt;&gt; manhattan(users['Hailey'], users['Jordyn'])
+7.5
+&gt;&gt;&gt;
+</code></pre>
+
+<p>下面我们编写一个函数来找出距离最近的用户（其实该函数会返回一个用户列表，按距离排序）：</p>
+<pre><code class="python">def computeNearestNeighbor(username, users):
+    &quot;&quot;&quot;计算所有用户至username用户的距离，倒序排列并返回结果列表&quot;&quot;&quot;
+    distances = []
+    for user in users:
+        if user != username:
+            distance = manhattan(users[user], users[username])
+            distances.append((distance, user))
+    # 按距离排序——距离近的排在前面
+    distances.sort()
+    return distances
+</code></pre>
+
+<p>简单测试一下：</p>
+<pre><code class="python">&gt;&gt;&gt; computeNearestNeighbor(&quot;Hailey&quot;, users)
+[(2.0, 'Veronica'), (4.0, 'Chan'), (4.0, 'Sam'), (4.5, 'Dan'), (5.0, 'Angelica'), (5.5, 'Bill'), (7.5, 'Jordyn')]
+</code></pre>
+
+<p>最后，我们结合以上内容来进行推荐。假设我想为Hailey做推荐，这里我找到了离他距离最近的用户Veronica。然后，我会找到出Veronica评价过但Hailey没有评价的乐队，并假设Hailey对这些陌生乐队的评价会和Veronica相近。比如，Hailey没有评价过Phoenix乐队，而Veronica对这个乐队打出了4分，所以我们认为Hailey也会喜欢这支乐队。下面的函数就实现了这一逻辑：</p>
+<pre><code class="python">def recommend(username, users):
+    &quot;&quot;&quot;返回推荐结果列表&quot;&quot;&quot;
+    # 找到距离最近的用户
+    nearest = computeNearestNeighbor(username, users)[0][1]
+    recommendations = []
+    # 找出这位用户评价过、但自己未曾评价的乐队
+    neighborRatings = users[nearest]
+    userRatings = users[username]
+    for artist in neighborRatings:
+        if not artist in userRatings:
+            recommendations.append((artist, neighborRatings[artist]))
+    # 按照评分进行排序
+    return sorted(recommendations, key=lambda artistTuple: artistTuple[1], reverse = True)
+</code></pre>
+
+<p>下面我们就可以用它来为Hailey做推荐了：</p>
+<pre><code class="python">&gt;&gt;&gt; recommend('Hailey', users)
+[('Phoenix', 4.0), ('Blues Traveler', 3.0), ('Slightly Stoopid', 2.5)]
+</code></pre>
+
+<p>运行结果和我们的预期相符。我们看可以看到，和Hailey距离最近的用户是Veronica，Veronica对Phoenix乐队打了4分。我们再试试其他人：</p>
+<pre><code class="python">&gt;&gt;&gt; recommend('Chan', users)
+[('The Strokes', 4.0), ('Vampire Weekend', 1.0)]
+&gt;&gt;&gt; recommend('Sam', users)
+[('Deadmau5', 1.0)]
+</code></pre>
+
+<p>我们可以猜想Chan会喜欢The Strokes乐队，而Sam不会太欣赏Deadmau5。</p>
+<pre><code class="python">&gt;&gt;&gt; recommend('Angelica', users)
+[]
+</code></pre>
+
+<p>对于Angelica，我们得到了空的返回值，也就是说我们无法对其进行推荐。让我们看看是哪里有问题：</p>
+<pre><code class="python">&gt;&gt;&gt; computeNearestNeighbor('Angelica', users)
+[(3.5, 'Veronica'), (4.5, 'Chan'), (5.0, 'Hailey'), (8.0, 'Sam'), (9.0, 'Bill'), (9.0, 'Dan'), (9.5, 'Jordyn')]
+</code></pre>
+
+<p>Angelica最相似的用户是Veronica，让我们回头看看数据：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-13.png" /></p>
+<p>我们可以看到，Veronica评价过的乐队，Angelica也都评价过了，所以我们没有推荐。</p>
+<p>之后，我们会讨论如何解决这一问题。</p>
+<p><strong>作业：实现一个计算闵可夫斯基距离的函数，并在计算用户距离时使用它。</strong></p>
+<pre><code class="python">def minkowski(rating1, rating2, r):
+    distance = 0
+    for key in rating1:
+        if key in rating2:
+            distance += pow(abs(rating1[key] - rating2[key]), r)
+    return pow(distance, 1.0 / r)
+
+# 修改computeNearestNeighbor函数中的一行
+distance = minkowski(users[user], users[username], 2)
+# 这里2表示使用欧几里得距离
+</code></pre>
+
+<h3 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>用户的问题</h3>
+<p>让我们仔细看看用户对乐队的评分，可以发现每个用户的打分标准非常不同：</p>
+<ul>
+<li>Bill没有打出极端的分数，都在2至4分之间；</li>
+<li>Jordyn似乎喜欢所有的乐队，打分都在4至5之间；</li>
+<li>Hailey是一个有趣的人，他的分数不是1就是4。</li>
+</ul>
+<p>那么，如何比较这些用户呢？比如Hailey的4分相当于Jordan的4分还是5分呢？我觉得更接近5分。这样一来就会影响到推荐系统的准确性了。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-24.png" /></p>
+<ul>
+<li>左：我非常喜欢Broken Bells乐队，所以我给他们打4分！</li>
+<li>右：Broken Bells乐队还可以，我打4分。</li>
+</ul>
+<h3 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>皮尔逊相关系数</h3>
+<p>解决方法之一是使用皮尔逊相关系数。简单起见，我们先看下面的数据（和之前的数据不同）：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-25.png" /></p>
+<p>这种现象在数据挖掘领域称为“分数膨胀”。Clara最低给了4分——她所有的打分都在4至5分之间。我们将它绘制成图表：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-26.png" /></p>
+<p><strong>一条直线——完全吻合！！！</strong></p>
+<p>直线即表示Clara和Robert的偏好完全一致。他们都认为Phoenix是最好的乐队，然后是Blues Traveler、Norah Jones。如果Clara和Robert的意见不一致，那么落在直线上的点就越少。</p>
+<p><strong>意见基本一致的情形</strong></p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-27.png" /></p>
+<p><strong>意见不太一致的情形</strong></p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-28.png" /></p>
+<p>所以从图表上理解，意见相一致表现为一条直线。皮尔逊相关系数用于衡量两个变量之间的相关性（这里的两个变量指的是Clara和Robert），它的值在-1至1之间，1表示完全吻合，-1表示完全相悖。从直观上理解，最开始的那条直线皮尔逊相关系数为1，第二张是0.91，第三张是0.81。因此我们利用这一点来找到相似的用户。</p>
+<p>皮尔逊相关系数的计算公式是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-29.png" /></p>
+<p>这里我说说自己的经历。我大学读的是现代音乐艺术，课程包括芭蕾、现代舞、服装设计等，没有任何数学课程。我高中读的是男子学校，学习了管道工程和汽车维修，只懂得很基础的数学知识。不知是因为我的学科背景，还是习惯于用直觉来思考，当我遇到这样的数学公式时会习惯性地跳过，继续读下面的文字。如果你和我一样，我强烈建议你与这种惰性抗争，试着去理解这些公式。它们虽然看起来很复杂，但还是能够被常人所理解的。</p>
+<p>上面的公式除了看起来比较复杂，另一个问题是要获得计算结果必须对数据做多次遍历。好在我们有另外一个公式，能够计算皮尔逊相关系数的近似值：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-30.png" /></p>
+<p>这个公式虽然看起来更加复杂，而且其计算结果会不太稳定，有一定误差存在，但它最大的优点是，用代码实现的时候可以只遍历一次数据，我们会在下文看到。首先，我们将这个公式做一个分解，计算下面这个表达式的值：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-31.png" /></p>
+<p>对于Clara和Robert，我们可以得到：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-32.png" /></p>
+<p>很简单把？下面我们计算这个公式：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-33.png" /></p>
+<p>Clara的总评分是22.5， Robert是15，他们评价了5支乐队，因此：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-34.png" /></p>
+<p>所以，那个巨型公式的分子就是70 - 67.5 = 2.5。</p>
+<p>下面我们来看分母：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-35.png" /></p>
+<p>首先：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-36.png" /></p>
+<p>我们已经计算过Clara的总评分是22.5，它的平方是506.25，除以乐队的数量5，得到101.25。综合得到：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-37.png" /></p>
+<p>对于Robert，我们用同样的方法计算：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-38.png" /></p>
+<p>最后得到：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-39.png" /></p>
+<p>因此，1表示Clara和Robert的偏好完全吻合。</p>
+<p><strong>先休息一下吧</strong></p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-40.png" /></p>
+<p><strong>计算皮尔逊相关系数的代码</strong></p>
+<pre><code class="python">from math import sqrt
+
+def pearson(rating1, rating2):
+    sum_xy = 0
+    sum_x = 0
+    sum_y = 0
+    sum_x2 = 0
+    sum_y2 = 0
+    n = 0
+    for key in rating1:
+        if key in rating2:
+            n += 1
+            x = rating1[key]
+            y = rating2[key]
+            sum_xy += x * y
+            sum_x += x
+            sum_y += y
+            sum_x2 += pow(x, 2)
+            sum_y2 += pow(y, 2)
+    # 计算分母
+    denominator = sqrt(sum_x2 - pow(sum_x, 2) / n) * sqrt(sum_y2 - pow(sum_y, 2) / n)
+    if denominator == 0:
+        return 0
+    else:
+        return (sum_xy - (sum_x * sum_y) / n) / denominator
+</code></pre>
+
+<p>测试一下：</p>
+<pre><code class="python">&gt;&gt;&gt; pearson(users['Angelica'], users['Bill'])
+-0.9040534990682699
+&gt;&gt;&gt; pearson(users['Angelica'], users['Hailey'])
+0.42008402520840293
+&gt;&gt;&gt; pearson(users['Angelica'], users['Jordyn'])
+0.7639748605475432
+</code></pre>
+
+<h2 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>最后一个公式：余弦相似度</h2>
+<p>这里我将奉上最后一个公式：余弦相似度。它在文本挖掘中应用得较多，在协同过滤中也会使用到。为了演示如何使用该公式，我们换一个示例。这里记录了每个用户播放歌曲的次数，我们用这些数据进行推荐：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-41.png" /></p>
+<p>简单扫一眼上面的数据（或者用之前讲过的距离计算公式），我们可以发现Ann的偏好和Sally更为相似。</p>
+<p><strong>问题在哪儿？</strong></p>
+<p>我在iTunes上有大约4000首歌曲，下面是我最常听的音乐：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-42.png" /></p>
+<p>可以看到，Moonlight Sonata这首歌我播放了25次，但很有可能你一次都没有听过。事实上，上面列出的这些歌曲可能你一首都没听过。此外，iTunes上有1500万首音乐，而我只听过4000首。所以说单个用户的数据是 <em>稀疏</em> 的，因为非零值较总体要少得多。当我们用1500万首歌曲来比较两个用户时，很有可能他们之间没有任何交集，这样一来就无从计算他们之间的距离了。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-43.png" /></p>
+<p>类似的情况是在计算两篇文章的相似度时。比如说我们想找一本和《The Space Pioneers》相类似的书，方法之一是利用单词出现的频率，即统计每个单词在书中出现的次数占全书单词的比例，如“the”出现频率为6.13%，“Tom” 0.89%，“space” 0.25%。我们可以用这些数据来寻找一本相近的书。但是，这里同样有数据的稀疏性问题。《The Space Pioneers》中有6629个不同的单词，但英语语言中有超过100万个单词，这样一来非零值就很稀少了，也就不能计算两本书之间的距离。</p>
+<p>余弦相似度的计算中会略过这些非零值。它的计算公式是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-44.png" /></p>
+<p>其中，“·”号表示数量积。“||x||”表示向量x的模，计算公式是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-45.png" /></p>
+<p>我们用上文中“偏好完全一致”的示例：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-25.png" /></p>
+<p>所以两个向量为：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-46.png" /></p>
+<p>它们的模是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-47.png" /></p>
+<p>数量积的计算：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-48.png" /></p>
+<p>因此余弦相似度是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-49.png" /></p>
+<p>余弦相似度的范围从1到-1，1表示完全匹配，-1表示完全相悖。所以0.935表示匹配度很高。</p>
+<p><strong>作业：尝试计算Angelica和Veronica的余弦相似度</strong></p>
+<h3 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>应该使用哪种相似度？</h3>
+<p>我们整本书都会探索这个问题，以下是一些提示：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-50.png" /></p>
+<ul>
+<li>如果数据存在“分数膨胀”问题，就使用皮尔逊相关系数。</li>
+<li>如果数据比较“密集”，变量之间基本都存在公有值，且这些距离数据是非常重要的，那就使用欧几里得或曼哈顿距离。</li>
+<li>如果数据是稀疏的，则使用余弦相似度。</li>
+</ul>
+<p>所以，如果数据是密集的，曼哈顿距离和欧几里得距离都是适用的。那么稀疏的数据可以使用吗？我们来看一个也和音乐有关的示例：假设有三个人，每人都给100首音乐评过分。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-51.png" /></p>
+<ul>
+<li>Jake（左）：乡村音乐的忠实听众。</li>
+<li>Linda和Eric（右）：我们爱六十年代的摇滚乐！</li>
+</ul>
+<p>Linda和Eric喜欢相同的音乐，他们的评分列表中有20首相同的的歌曲，且评分均值相差不到0.5！所以他们之间的曼哈顿距离为20 x 0.5 = 10，欧几里得距离则为：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-52.png" /></p>
+<p>Linda和Jake只共同评分了一首歌曲：Chris Cagle的 <em>What a Beautiful Day</em> 。Linda打了3分，Jake打了5分，所以他们之间的曼哈顿距离为2，欧几里得距离为：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-53.png" /></p>
+<p>所以不管是曼哈顿距离还是欧几里得距离，Jake都要比Eric离Linda近，这不符合实际情况。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-54.png" /></p>
+<blockquote>
+<p>嘿，我想到一个办法。人们给音乐打分是从1到5分，那些没有打分的音乐就统一给0分好了，这样就能解决数据稀疏的问题了！</p>
+</blockquote>
+<p>想法不错，但是这样做也不行。为了解释这一问题，我们再引入两个人到例子里来：Cooper和Kelsey。他们和Jake都有着非常相似的音乐偏好，其中Jake在我们网站上评价了25首歌曲。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-55.png" /></p>
+<p>Cooper评价了26首歌曲，其中25首和Jake是一样的。他们对每首歌曲的评价差值只有0.25！</p>
+<p>Kelsey在我们网站上评价了150首歌曲，其中25首和Jake相同。和Cooper一样，她和Jake之间的评价差值也只有0.25！</p>
+<p>所以我们从直觉上看Cooper和Keylsey离Jake的距离应该相似。但是，当我们计算他们之间的曼哈顿距离和欧几里得距离时（代入0值），会发现Cooper要比Keylsey离Jake近得多。</p>
+<p><strong>为什么呢？</strong></p>
+<p>我们来看下面的数据：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-56.png" /></p>
+<p>从4、5、6这三首歌来看，两人离Jake的距离是相同的，但计算出的曼哈顿距离却不这么显示：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-57.png" /></p>
+<p>问题就在于数据中的0值对结果的影响很大，所以用0代替空值的方法并不比原来的方程好。还有一种变通的方式是计算“平均值”——将两人共同评价过的歌曲分数除以歌曲数量。</p>
+<p>总之，曼哈顿距离和欧几里得距离在数据完整的情况下会运作得非常好，如果数据比较稀疏，则要考虑使用余弦距离。</p>
+<h3 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>古怪的现象</h3>
+<p>假设我们要为Amy推荐乐队，她喜欢Phoenix、Passion Pit、以及Vampire Weekend。和她最相似的用户是Bob，他也喜欢这三支乐队。他的父亲为Walter Ostanek乐队演奏手风琴，所以受此影响，他给了这支乐队5星评价。按照我们现在的推荐逻辑，我们会将这支乐队推荐给Amy，但有可能她并不喜欢。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-58.png" /></p>
+<p>或者试想一下，Billy Bob Olivera教授喜欢阅读数据挖掘方面的书籍以及科幻小说，他最邻近的用户是我，因为我也喜欢这两种书。然而，我又是一个贵宾犬的爱好者，所以给《贵宾犬的隐秘生活》这本书打了很高的分。这样一来，现有的推荐方法会将这本书介绍给Olivera教授。</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-59.png" /></p>
+<p>问题就在于我们只依靠最相似的 <strong>一个</strong> 用户来做推荐，如果这个用户有些特殊的偏好，就会直接反映在推荐内容里。解决方法之一是找寻多个相似的用户，这里就要用到K最邻近算法了。</p>
+<h3 id="k"><a name="user-content-k" href="#k" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>K最邻近算法</h3>
+<p>在协同过滤中可以使用K最邻近算法来找出K个最相似的用户，以此作为推荐的基础。不同的应用有不同的K值，需要做一些实验来得出。以下给到读者一个基本的思路。</p>
+<p>假设我要为Ann做推荐，并令K=3。使用皮尔逊相关系数得到的结果是：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-60.png" /></p>
+<p>这三个人都会对推荐结果有所贡献，问题在于我们如何确定他们的比重呢？我们直接用相关系数的比重来描述，Sally的比重是0.8/2=40%，Eric是0.7/2=35%，Amanda则是25%：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-61.png" /></p>
+<p>假设他们三人对Grey Wardens的评分以及加权后的结果如下：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-62.png" /></p>
+<p>最后计算得到的分数为：</p>
+<p><img alt="" src="///F://guidetodatamining/guidetodatamining/img/chapter-2/chapter-2-63.png" /></p>
+<h2 id="python_1"><a name="user-content-python_1" href="#python_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python推荐模块</h2>
+<p>我将本章学到的内容都汇集成了一个Python类，虽然<a href="///F://guidetodatamining/guidetodatamining/code/chapter-2/recommender.py">代码</a>有些长，我还是贴在了这里：</p>
+<pre><code class="python">import codecs 
+from math import sqrt
+
+users = {&quot;Angelica&quot;: {&quot;Blues Traveler&quot;: 3.5, &quot;Broken Bells&quot;: 2.0,
+                      &quot;Norah Jones&quot;: 4.5, &quot;Phoenix&quot;: 5.0,
+                      &quot;Slightly Stoopid&quot;: 1.5,
+                      &quot;The Strokes&quot;: 2.5, &quot;Vampire Weekend&quot;: 2.0},
+
+         &quot;Bill&quot;:{&quot;Blues Traveler&quot;: 2.0, &quot;Broken Bells&quot;: 3.5,
+                 &quot;Deadmau5&quot;: 4.0, &quot;Phoenix&quot;: 2.0,
+                 &quot;Slightly Stoopid&quot;: 3.5, &quot;Vampire Weekend&quot;: 3.0},
+
+         &quot;Chan&quot;: {&quot;Blues Traveler&quot;: 5.0, &quot;Broken Bells&quot;: 1.0,
+                  &quot;Deadmau5&quot;: 1.0, &quot;Norah Jones&quot;: 3.0, &quot;Phoenix&quot;: 5,
+                  &quot;Slightly Stoopid&quot;: 1.0},
+
+         &quot;Dan&quot;: {&quot;Blues Traveler&quot;: 3.0, &quot;Broken Bells&quot;: 4.0,
+                 &quot;Deadmau5&quot;: 4.5, &quot;Phoenix&quot;: 3.0,
+                 &quot;Slightly Stoopid&quot;: 4.5, &quot;The Strokes&quot;: 4.0,
+                 &quot;Vampire Weekend&quot;: 2.0},
+
+         &quot;Hailey&quot;: {&quot;Broken Bells&quot;: 4.0, &quot;Deadmau5&quot;: 1.0,
+                    &quot;Norah Jones&quot;: 4.0, &quot;The Strokes&quot;: 4.0,
+                    &quot;Vampire Weekend&quot;: 1.0},
+
+         &quot;Jordyn&quot;:  {&quot;Broken Bells&quot;: 4.5, &quot;Deadmau5&quot;: 4.0,
+                     &quot;Norah Jones&quot;: 5.0, &quot;Phoenix&quot;: 5.0,
+                     &quot;Slightly Stoopid&quot;: 4.5, &quot;The Strokes&quot;: 4.0,
+                     &quot;Vampire Weekend&quot;: 4.0},
+
+         &quot;Sam&quot;: {&quot;Blues Traveler&quot;: 5.0, &quot;Broken Bells&quot;: 2.0,
+                 &quot;Norah Jones&quot;: 3.0, &quot;Phoenix&quot;: 5.0,
+                 &quot;Slightly Stoopid&quot;: 4.0, &quot;The Strokes&quot;: 5.0},
+
+         &quot;Veronica&quot;: {&quot;Blues Traveler&quot;: 3.0, &quot;Norah Jones&quot;: 5.0,
+                      &quot;Phoenix&quot;: 4.0, &quot;Slightly Stoopid&quot;: 2.5,
+                      &quot;The Strokes&quot;: 3.0}
+        }
+
+
+class recommender:
+
+    def __init__(self, data, k=1, metric='pearson', n=5):
+        &quot;&quot;&quot; 初始化推荐模块
+        data   训练数据
+        k      K邻近算法中的值
+        metric 使用何种距离计算方式
+        n      推荐结果的数量
+        &quot;&quot;&quot;
+        self.k = k
+        self.n = n
+        self.username2id = {}
+        self.userid2name = {}
+        self.productid2name = {}
+        # 将距离计算方式保存下来
+        self.metric = metric
+        if self.metric == 'pearson':
+            self.fn = self.pearson
+        #
+        # 如果data是一个字典类型，则保存下来，否则忽略
+        #
+        if type(data).__name__ == 'dict':
+            self.data = data
+
+    def convertProductID2name(self, id):
+        &quot;&quot;&quot;通过产品ID获取名称&quot;&quot;&quot;
+        if id in self.productid2name:
+            return self.productid2name[id]
+        else:
+            return id
+
+    def userRatings(self, id, n):
+        &quot;&quot;&quot;返回该用户评分最高的物品&quot;&quot;&quot;
+        print (&quot;Ratings for &quot; + self.userid2name[id])
+        ratings = self.data[id]
+        print(len(ratings))
+        ratings = list(ratings.items())
+        ratings = [(self.convertProductID2name(k), v)
+                   for (k, v) in ratings]
+        # 排序并返回结果
+        ratings.sort(key=lambda artistTuple: artistTuple[1],
+                     reverse = True)
+        ratings = ratings[:n]
+        for rating in ratings:
+            print(&quot;%s\t%i&quot; % (rating[0], rating[1]))
+
+    def loadBookDB(self, path=''):
+        &quot;&quot;&quot;加载BX数据集，path是数据文件位置&quot;&quot;&quot;
+        self.data = {}
+        i = 0
+        #
+        # 将书籍评分数据放入self.data
+        #
+        f = codecs.open(path + &quot;BX-Book-Ratings.csv&quot;, 'r', 'utf8')
+        for line in f:
+            i += 1
+            #separate line into fields
+            fields = line.split(';')
+            user = fields[0].strip('&quot;')
+            book = fields[1].strip('&quot;')
+            rating = int(fields[2].strip().strip('&quot;'))
+            if user in self.data:
+                currentRatings = self.data[user]
+            else:
+                currentRatings = {}
+            currentRatings[book] = rating
+            self.data[user] = currentRatings
+        f.close()
+        #
+        # 将书籍信息存入self.productid2name
+        # 包括isbn号、书名、作者等
+        #
+        f = codecs.open(path + &quot;BX-Books.csv&quot;, 'r', 'utf8')
+        for line in f:
+            i += 1
+            #separate line into fields
+            fields = line.split(';')
+            isbn = fields[0].strip('&quot;')
+            title = fields[1].strip('&quot;')
+            author = fields[2].strip().strip('&quot;')
+            title = title + ' by ' + author
+            self.productid2name[isbn] = title
+        f.close()
+        #
+        #  将用户信息存入self.userid2name和self.username2id
+        #
+        f = codecs.open(path + &quot;BX-Users.csv&quot;, 'r', 'utf8')
+        for line in f:
+            i += 1
+            #print(line)
+            #separate line into fields
+            fields = line.split(';')
+            userid = fields[0].strip('&quot;')
+            location = fields[1].strip('&quot;')
+            if len(fields) &gt; 3:
+                age = fields[2].strip().strip('&quot;')
+            else:
+                age = 'NULL'
+            if age != 'NULL':
+                value = location + '  (age: ' + age + ')'
+            else:
+                value = location
+            self.userid2name[userid] = value
+            self.username2id[location] = userid
+        f.close()
+        print(i)
+
+    def pearson(self, rating1, rating2):
+        sum_xy = 0
+        sum_x = 0
+        sum_y = 0
+        sum_x2 = 0
+        sum_y2 = 0
+        n = 0
+        for key in rating1:
+            if key in rating2:
+                n += 1
+                x = rating1[key]
+                y = rating2[key]
+                sum_xy += x * y
+                sum_x += x
+                sum_y += y
+                sum_x2 += pow(x, 2)
+                sum_y2 += pow(y, 2)
+        if n == 0:
+            return 0
+        # 计算分母
+        denominator = (sqrt(sum_x2 - pow(sum_x, 2) / n)
+                       * sqrt(sum_y2 - pow(sum_y, 2) / n))
+        if denominator == 0:
+            return 0
+        else:
+            return (sum_xy - (sum_x * sum_y) / n) / denominator
+
+    def computeNearestNeighbor(self, username):
+        &quot;&quot;&quot;获取邻近用户&quot;&quot;&quot;
+        distances = []
+        for instance in self.data:
+            if instance != username:
+                distance = self.fn(self.data[username],
+                                   self.data[instance])
+                distances.append((instance, distance))
+        # 按距离排序，距离近的排在前面
+        distances.sort(key=lambda artistTuple: artistTuple[1],
+                       reverse=True)
+        return distances
+
+    def recommend(self, user):
+       &quot;&quot;&quot;返回推荐列表&quot;&quot;&quot;
+       recommendations = {}
+       # 首先，获取邻近用户
+       nearest = self.computeNearestNeighbor(user)
+       #
+       # 获取用户评价过的商品
+       #
+       userRatings = self.data[user]
+       #
+       # 计算总距离
+       totalDistance = 0.0
+       for i in range(self.k):
+          totalDistance += nearest[i][1]
+       # 汇总K邻近用户的评分
+       for i in range(self.k):
+          # 计算饼图的每个分片
+          weight = nearest[i][1] / totalDistance
+          # 获取用户名称
+          name = nearest[i][0]
+          # 获取用户评分
+          neighborRatings = self.data[name]
+          # 获得没有评价过的商品
+          for artist in neighborRatings:
+             if not artist in userRatings:
+                if artist not in recommendations:
+                   recommendations[artist] = (neighborRatings[artist]
+                                              * weight)
+                else:
+                   recommendations[artist] = (recommendations[artist]
+                                              + neighborRatings[artist]
+                                              * weight)
+       # 开始推荐
+       recommendations = list(recommendations.items())
+       recommendations = [(self.convertProductID2name(k), v)
+                          for (k, v) in recommendations]
+       # 排序并返回
+       recommendations.sort(key=lambda artistTuple: artistTuple[1],
+                            reverse = True)
+       # 返回前n个结果
+       return recommendations[:self.n]
+</code></pre>
+
+<p><strong>运行示例</strong></p>
+<p>首先构建一个推荐类，然后获取推荐结果：</p>
+<pre><code class="python">&gt;&gt;&gt; r = recommender(users)
+&gt;&gt;&gt; r.recommend('Jordyn')
+[('Blues Traveler', 5.0)]
+&gt;&gt;&gt; r.recommend('Hailey')
+[('Phoenix', 5.0), ('Slightly Stoopid', 4.5)]
+</code></pre>
+
+<h3 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>新的数据集</h3>
+<p>现在让我们使用一个更为真实的数据集。Cai-Nicolas Zeigler从图书漂流站收集了超过100万条评价数据——278,858位用户为271,379本书打了分。这份数据（匿名）可以从<a href="http://www.informatik.uni-freiburg.de/~cziegler/BX/">这个地址</a>获得，有SQL和CSV两种格式。由于特殊符号的关系，这些数据无法直接加载到Python里。我做了一些清洗，可以从<a href="http://guidetodatamining.com/guide/ch2/BX-Dump.zip">这里下载</a>。</p>
+<p>CSV文件包含了三张表：</p>
+<ul>
+<li>用户表，包括用户ID、位置、年龄等信息。其中用户的姓名已经隐去；</li>
+<li>书籍表，包括ISBN号、标题、作者、出版日期、出版社等；</li>
+<li>评分表，包括用户ID、书籍ISBN号、以及评分（0-10分）。</li>
+</ul>
+<p>上文Python代码中的loadBookDB方法可以加载这些数据，用法如下：</p>
+<pre><code class="python">&gt;&gt;&gt; r.loadBookDB('/Users/raz/Downloads/BX-Dump/')
+1700018
+&gt;&gt;&gt; r.recommend('171118')
+</code></pre>
+
+<p><strong>注意</strong> 由于数据集比较大，大约需要几十秒的时间加载和查询。</p>
+<h3 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>项目实践</h3>
+<p>只有运行调试过书中的代码后才能真正掌握这些方法，以下是一些实践建议：</p>
+<ol>
+<li>实现一个计算曼哈顿距离和欧几里得距离的方法；</li>
+<li>本书的网站上有一个包含25部电影评价的<a href="http://guidetodatamining.com/guide/ch2/Movie_Ratings.csv">数据集</a>，实现一个推荐算法。</li>
+</ol></article></body></html>
